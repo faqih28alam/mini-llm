@@ -6,15 +6,15 @@ import os
 
 # Hyperparameters
 batch_size = 64 # how many independent sequences will we process in parallel?
-block_size = 64 # what is the maximum context length for predictions?
-max_iters = 5000
+block_size = 128 # increased for Indonesian word structures
+max_iters = 10000 # more iterations for a larger dataset
 eval_interval = 500
 learning_rate = 3e-4
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
-n_embd = 128
-n_head = 4
-n_layer = 4
+n_embd = 256 # increased model capacity
+n_head = 8
+n_layer = 6 # increased depth
 dropout = 0.2
 # ------------
 
